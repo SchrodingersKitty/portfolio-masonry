@@ -13,6 +13,8 @@ layout: layouts/base.html
             data-pswp-srcset="{{ img.srcset }}">
             <img src="{{ img.thumb.url }}"
                 alt="{{ entry.alt or entry.title }}"
+                srcset="{{ img.srcset }}"
+                sizes="(min-width: 420px) 640px, 100vw"
                 decoding="async"
             >
         </a>
