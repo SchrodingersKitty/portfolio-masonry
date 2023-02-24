@@ -3,15 +3,17 @@ layout: layouts/base.html
 ---
 {% if title %}<h1>{{ title }}</h1>{% endif %}
 {{ content | safe }}
-<div class="gallery items{{ gallery | length }}">
+<div class="gallery items{{ gallery | length }}" id="gallery">
 {% for entry in gallery %}
     {% set img = entry.url | findURL(images) %}
     <figure>
-        <a href="{{ img.url }}">
-            <img src="{{ img.thumb.url }}"
+        <a href="{{ img.original.url }}"
+            data-pswp-width="{{ img.original.width }}"
+            data-pswp-height="{{ img.original.height }}"
+            data-pswp-srcset="{{ img.srcset }}">
+            <img src="{{ img.original.url }}"
                 alt="{{ entry.alt or entry.title }}"
-                width="{{ img.thumb.width }}"
-                title="{{ entry.title }}"
+                srcset="{{ img.srcset }}"
                 decoding="async"
             >
         </a>
@@ -19,12 +21,9 @@ layout: layouts/base.html
     </figure>
 {% endfor %}
 </div>
-<script>
-window.onload = (e) => new SimpleLightbox('.gallery a', {
-    widthRatio: 0.85,
-    heightRatio: 1,
-    overlayOpacity: 1,
-    captions: false,
-    alertError: false
-});
+{% set js %}
+    {% include "js/lightbox.js" %}
+{% endset %}
+<script type="module">
+{{ js | safe }}
 </script>

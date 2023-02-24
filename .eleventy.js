@@ -3,14 +3,11 @@ const sass = require("eleventy-sass");
 
 module.exports = config => {
   config.addPlugin(EleventyHtmlBasePlugin);
-  config.addPlugin(sass, {
-    sass: {
-      loadPaths: ['./node_modules/simplelightbox/src', './src/_includes']
-    }
-  });
-  config.addPassthroughCopy('./src/img');
+  config.addPlugin(sass);
   config.addPassthroughCopy('./src/fonts');
-  config.addPassthroughCopy({ './node_modules/simplelightbox/dist/simple-lightbox.min.js': 'js/simple-lightbox.min.js' });
+  config.addPassthroughCopy({ './node_modules/photoswipe/dist/photoswipe-lightbox.esm.min.js': 'js/photoswipe-lightbox.esm.min.js' });
+  config.addPassthroughCopy({ './node_modules/photoswipe/dist/photoswipe.esm.min.js': 'js/photoswipe.esm.min.js' });
+  config.addPassthroughCopy({ './node_modules/photoswipe/dist/photoswipe.css': 'css/photoswipe.css' });
   config.addFilter('findURL', (url, collection) => {
     return collection.find(i => i.url == url);
   });
