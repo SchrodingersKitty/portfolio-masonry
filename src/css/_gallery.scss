@@ -1,0 +1,38 @@
+.gallery {
+  column-width: $gallery-column-width;
+  column-gap: $gallery-gap;
+  margin: auto;
+}
+
+@for $i from 1 to 5 {
+  .items#{$i} {
+    width: min(100%, #{$gallery-column-width * $i + $gallery-gap * ($i - 1)});
+  }
+}
+
+.gallery figure {
+  margin: 0;
+  margin-bottom: $gallery-gap;
+  break-inside: avoid;
+  position: relative;
+}
+
+.gallery figcaption {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  text-align: center;
+  background: linear-gradient(to right, rgba(0,0,0,0), $bg-color-1, $bg-color-1, $bg-color-1, $bg-color-1 ,rgba(0,0,0,0));
+  opacity: 0;
+  transition: linear 0.2s;
+}
+
+.gallery figure:hover figcaption {
+  opacity: 1;
+}
+
+.gallery img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}

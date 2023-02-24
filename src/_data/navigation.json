@@ -1,0 +1,19 @@
+[
+    {
+        "text": "Home",
+        "url": "/"
+    },
+    {
+        "text": "Abstract",
+        "url": "/gallery/abstract/"
+    },
+    {
+        "text": "Photography",
+        "url": "/gallery/photography/"
+    },
+    {
+        "text": "Contact",
+        "url": "/contact/",
+        "important": true
+    }
+]

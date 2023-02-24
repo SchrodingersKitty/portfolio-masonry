@@ -1,0 +1,10 @@
+<footer>
+    <div class="bar">
+        <p>{{ site.description }}</p>
+        <ul>
+        {% for name, url in site.socials %}
+            <li><a href="{{ url }}">{{ name }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+</footer>

@@ -1,0 +1,28 @@
+body {
+  background-color: $bg-color-1;
+  color: $font-color-1;
+  font: 1em $font-family;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: calc(100vh - 20px);
+}
+
+main {
+  flex-grow: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: $font-color-2b;
+  background-color: $bg-color-2b;
+}

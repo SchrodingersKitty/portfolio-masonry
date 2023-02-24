@@ -1,0 +1,30 @@
+---
+layout: layouts/base.html
+---
+{% if title %}<h1>{{ title }}</h1>{% endif %}
+{{ content | safe }}
+<div class="gallery items{{ gallery | length }}">
+{% for entry in gallery %}
+    {% set img = entry.url | findURL(images) %}
+    <figure>
+        <a href="{{ img.url }}">
+            <img src="{{ img.thumb.url }}"
+                alt="{{ entry.alt or entry.title }}"
+                width="{{ img.thumb.width }}"
+                title="{{ entry.title }}"
+                decoding="async"
+            >
+        </a>
+        {% if entry.title %}<figcaption>{{ entry.title }}</figcaption>{% endif %}
+    </figure>
+{% endfor %}
+</div>
+<script>
+window.onload = (e) => new SimpleLightbox('.gallery a', {
+    widthRatio: 0.85,
+    heightRatio: 1,
+    overlayOpacity: 1,
+    captions: false,
+    alertError: false
+});
+</script>

@@ -1,0 +1,18 @@
+.container {
+    color: $font-color-2a;
+    background-color: $bg-color-2a;
+    width: max(50%, 50rem);
+    margin: 0 auto;
+    box-shadow: 0 0 4px 4px $bg-color-2a;
+}
+
+article {
+    padding: 1em;
+    text-indent: 2em;
+}
+
+@media screen and (max-width: 50rem) {
+    .container {
+        width: 100%;
+    }
+}

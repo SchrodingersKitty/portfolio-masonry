@@ -1,0 +1,36 @@
+// site variables
+$font-family: 'Karla', Arial, sans-serif;
+$font-color-1: #fff;
+$bg-color-1: #0E0E12;
+$font-color-2a: #000;
+$bg-color-2a: #F7F0F0;
+$font-color-2b: #fff;
+$bg-color-2b: #477998;
+$gallery-column-width: 400px;
+$gallery-gap: 10px;
+
+// simplelightbox variables
+$sl-font-family: $font-family;
+$sl-overlay-background: rgba(0, 0, 0, 0.8);
+$sl-navigation-color: $bg-color-2a;
+$sl-caption-color: $bg-color-2a;
+$sl-caption-background: rgba(0, 0, 0, 0.6);
+
+$sl-counter-fontsize: 1rem;
+$sl-caption-fontsize: 1rem;
+$sl-close-fontsize: 3rem;
+
+$sl-breakpoint-medium: 35.5em;
+$sl-breakpoint-large:  50em;
+
+$sl-arrow-fontsize-small:  2rem;
+$sl-arrow-fontsize-medium: 3rem;
+$sl-arrow-fontsize-large:  3rem;
+$sl-img-border-small:  0 none;
+$sl-img-border-medium: 0 none;
+$sl-img-border-large:  0 none;
+$sl-iframe-border-small:  0 none;
+$sl-iframe-border-medium: 0 none;
+$sl-iframe-border-large:  0 none;
+
+$add-vendor-prefixes: true !default;

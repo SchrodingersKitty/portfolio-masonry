@@ -1,0 +1,20 @@
+{
+  "name": "ashen-gallery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy-img": "^3.0.0",
+    "eleventy-sass": "^2.2.1",
+    "fast-glob": "^3.2.12",
+    "simplelightbox": "^2.12.1"
+  }
+}
