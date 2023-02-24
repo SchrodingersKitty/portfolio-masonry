@@ -15,6 +15,7 @@ layout: layouts/base.html
                 alt="{{ entry.alt or entry.title }}"
                 srcset="{{ img.srcset }}"
                 sizes="(min-width: 420px) 640px, 100vw"
+                loading="lazy"
                 decoding="async"
             >
         </a>
