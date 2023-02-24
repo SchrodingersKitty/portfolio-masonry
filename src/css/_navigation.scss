@@ -96,6 +96,10 @@ footer ul a:hover, footer ul a:focus {
   text-decoration: underline;
 }
 
+footer i {
+  font-size: 2em;
+}
+
 @media screen and (max-width: 600px) {
   header::after, footer::before {
     background: $bg-color-2b

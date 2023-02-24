@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Twitter",
+        "url": "https://twitter.com/john-does-not-exist",
+        "icon": "fa-brands fa-twitter"
+    },
+    {
+        "name": "Instagram",
+        "url": "https://www.instagram.com/john-does-not-exist",
+        "icon": "fa-brands fa-instagram"
+    },
+    {
+        "name": "LinkedIn",
+        "url": "https://linkedin.com/in/john-does-not-exist",
+        "icon": "fa-brands fa-linkedin"
+    },
+    {
+        "name": "Discord",
+        "url": "https://discordapp.com/users/9999999999999999999999",
+        "icon": "fa-brands fa-discord"
+    },
+    {
+        "name": "GitHub",
+        "url": "https://github.com/john-does-not-exist",
+        "icon": "fa-brands fa-github"
+    }
+]

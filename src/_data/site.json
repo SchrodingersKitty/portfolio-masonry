@@ -2,12 +2,5 @@
     "title": "Simple Gallery Website",
     "description": "Simple portfolio and image gallery template made with eleventy.",
     "author": "John Doe",
-    "email": "john.doe@notexi.st",
-    "socials": {
-        "Twitter": "https://twitter.com/john-does-not-exist",
-        "Instagram": "https://www.instagram.com/john-does-not-exist",
-        "LinkedIn": "https://linkedin.com/in/john-does-not-exist",
-        "Discord": "https://discordapp.com/users/9999999999999999999999",
-        "GitHub": "https://github.com/john-does-not-exist"
-    }
+    "email": "john.doe@notexi.st"
 }
