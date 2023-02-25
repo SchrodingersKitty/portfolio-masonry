@@ -23,7 +23,7 @@ jobs:
       - name: Build
         run: |
           npm ci
-          npm run build
+          npm run build -- --pathprefix ${{ vars.PATH_PREFIX }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.8.0

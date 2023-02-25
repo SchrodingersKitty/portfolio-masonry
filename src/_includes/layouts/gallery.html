@@ -2,7 +2,7 @@
 layout: layouts/base.html
 ---
 {% if title %}<h1>{{ title }}</h1>{% endif %}
-<div class="gallery items{{ gallery | length }}" id="gallery">
+<div class="gallery" id="gallery">
 {% for entry in gallery %}
     {% set img = entry.url | findURL(images) %}
     {% set srcset = [] %}

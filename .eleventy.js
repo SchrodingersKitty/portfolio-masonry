@@ -24,6 +24,6 @@ module.exports = config => {
     dir: {
       input: 'src'
     },
-    pathPrefix: '/portfolio-masonry/'
+    pathPrefix: '/'
   };
 };
