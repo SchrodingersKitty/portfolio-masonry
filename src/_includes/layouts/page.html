@@ -2,8 +2,4 @@
 layout: layouts/base.html
 ---
 {% if title %}<h1>{{ title }}</h1>{% endif %}
-<div class="container">
-    <article>
-        {{ content | safe }}
-    </article>
-</div>
+{% include "partials/article.html" %}

@@ -2,7 +2,6 @@
 layout: layouts/base.html
 ---
 {% if title %}<h1>{{ title }}</h1>{% endif %}
-{{ content | safe }}
 <div class="gallery items{{ gallery | length }}" id="gallery">
 {% for entry in gallery %}
     {% set img = entry.url | findURL(images) %}
@@ -26,6 +25,7 @@ layout: layouts/base.html
 {% set js %}
     {% include "js/lightbox.js" %}
 {% endset %}
+{% include "partials/article.html" %}
 <script type="module">
 {{ js | safe }}
 </script>

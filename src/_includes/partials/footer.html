@@ -1,10 +1,13 @@
-<footer>
-    <div class="bar">
+<hr>
+<footer class="cluster">
+    <div>
         <p>{{ site.description }}</p>
-        <ul>
-        {% for s in socials %}
-            <li><a href="{{ s.url }}"><i class="{{ s.icon }}" title="{{ s.name }}"></i></a></li>
-        {% endfor %}
-        </ul>
+        <div class="cluster">
+            <ul class="list-reset socials">
+            {% for s in socials %}
+                <li><a href="{{ s.url }}"><i class="{{ s.icon }}" title="{{ s.name }}"></i></a></li>
+            {% endfor %}
+            </ul>
+        </div>
     </div>
 </footer>

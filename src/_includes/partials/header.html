@@ -1,10 +1,13 @@
-<header>
-    <nav class="bar">
+<header class="sidebar">
+    <div>
         <div class="logo">{{ site.title }}</div>
-        <ul>
-        {% for item in navigation %}
-            <li><a href="{{ item.url }}" class="{{ 'important' if item.important }}">{{ item.text }}</a></li>
-        {% endfor %}
-        </ul>
-    </nav>
+        <nav class="cluster">
+            <ul class="list-reset nav">
+            {% for item in navigation %}
+                <li><a href="{{ item.url }}" class="{{ 'important' if item.important }} {{ 'current' if item.url == page.url }}">{{ item.text }}</a></li>
+            {% endfor %}
+            </ul>
+        </nav>
+    </div>
 </header>
+<hr>
