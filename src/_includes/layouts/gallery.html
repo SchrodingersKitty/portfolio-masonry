@@ -5,14 +5,19 @@ layout: layouts/base.html
 <div class="gallery items{{ gallery | length }}" id="gallery">
 {% for entry in gallery %}
     {% set img = entry.url | findURL(images) %}
+    {% set srcset = [] %}
+    {% for src in img.srcset %}
+        {% set srcset = (srcset.push(src | url), srcset) %}
+    {% endfor %}
+    {% set srcset = srcset | join(',') %}
     <figure>
         <a href="{{ img.original.url }}"
             data-pswp-width="{{ img.original.width }}"
             data-pswp-height="{{ img.original.height }}"
-            data-pswp-srcset="{{ img.srcset }}">
+            data-pswp-srcset="{{ srcset }}">
             <img src="{{ img.thumb.url }}"
                 alt="{{ entry.alt or entry.title }}"
-                srcset="{{ img.srcset }}"
+                srcset="{{ srcset }}"
                 sizes="(min-width: 420px) 640px, 100vw"
                 loading="lazy"
                 decoding="async"

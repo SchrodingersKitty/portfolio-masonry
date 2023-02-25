@@ -5,8 +5,7 @@ async function generateResponsiveImages(file) {
   let data = await Image(file, {
     widths: ['auto', 360, 420, 640, 800, 1280, 1440, 1920],
     formats: ['webp'],
-    outputDir: './_site/img/',
-    urlPath: '/img/'
+    outputDir: './_site/img/'
   });
   return data['webp'].sort((a, b) => a.width - b.width);
 }
@@ -21,7 +20,7 @@ module.exports = async () => {
       url: path,
       original: images[images.length - 1],
       thumb: images.find(i => i.width == 640),
-      srcset: images.map(i => i.srcset).join(','),
+      srcset: images.map(i => i.srcset),
       images: images
     }
   });

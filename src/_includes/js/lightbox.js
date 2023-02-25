@@ -7,6 +7,6 @@ const lightbox = new PhotoSwipeLightbox({
     pswp.currSlide?.toggleZoom(point);
     pswp.element?.classList.toggle('pswp--ui-visible');
   },
-  pswpModule: () => import('/js/photoswipe.esm.min.js')
+  pswpModule: () => import('{{ "/js/photoswipe.esm.min.js" | url }}')
 });
 lightbox.init();
