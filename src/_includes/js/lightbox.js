@@ -1,4 +1,4 @@
-import PhotoSwipeLightbox from '/js/photoswipe-lightbox.esm.min.js';
+import PhotoSwipeLightbox from '{{ "/js/photoswipe-lightbox.esm.min.js" | url }}';
 const lightbox = new PhotoSwipeLightbox({
   gallery: '#gallery',
   children: 'a',
