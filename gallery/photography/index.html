@@ -54,7 +54,7 @@
 <hr>
     <main class="flow">
         <h1>Photography</h1>
-<div class="gallery items5" id="gallery">
+<div class="gallery" id="gallery">
 
     
     
@@ -200,6 +200,7 @@
 const lightbox = new PhotoSwipeLightbox({
   gallery: '#gallery',
   children: 'a',
+  mainClass: 'lightbox-main',
   imageClickAction: (point, e) => {
     const pswp = lightbox.pswp;
     pswp.currSlide?.toggleZoom(point);
