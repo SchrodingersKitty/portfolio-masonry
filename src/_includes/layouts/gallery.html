@@ -17,7 +17,7 @@ layout: layouts/base.html
             data-pswp-srcset="{{ srcset }}">
             <img src="{{ img.thumb.url }}"
                 alt="{{ entry.alt or entry.title }}"
-                srcset="{{ srcset }}"
+                srcset="{{ ims.srcset | join(',') }}"
                 sizes="(min-width: 420px) 640px, 100vw"
                 loading="lazy"
                 decoding="async"
